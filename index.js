@@ -32,7 +32,7 @@ function re() {
         db.push("todo", to_do);
         console.log("İs eklendi! İs ID: " + to_do.id);
         re();
-    } else if(command.toUpperCase() === "SİL") {
+    } else if(command.toUpperCase() === "SIL") {
         console.clear();
         const todo = rl.question('Silimek istediğiniz is ID: ');
         let to_do = db.get("todo") || [];
