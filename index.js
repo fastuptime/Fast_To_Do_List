@@ -35,14 +35,14 @@ function re() {
     } else if(command.toUpperCase() === "SİL") {
         console.clear();
         const todo = rl.question('Silimek istediğiniz is ID: ');
-        let to_do = db.get("todo");
+        let to_do = db.get("todo") || [];
         let new_to_do = to_do.filter(x => x.id !== todo);
         db.set("todo", new_to_do);
         console.log("İs silindi!");
         re();
     } else if(command.toUpperCase() === "LISTE") {
         console.clear();
-        let to_do = db.get("todo");
+        let to_do = db.get("todo") || [];
         to_do.forEach(x => {
             console.log(`${to_do.indexOf(x) + 1}. Yapilacak is: ${x.is}, Tarih: ${x.date}, ID: ${x.id}`);
         });
