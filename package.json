@@ -1,0 +1,19 @@
+{
+  "name": "fast-to-do-list",
+  "version": "1.0.0",
+  "description": "Fast To Do List",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Can & FastUptime",
+  "repository": "fastuptime/Fast_To_Do_List",
+  "license": "ISC",
+  "dependencies": {
+    "croxydb": "^0.0.7",
+    "moment": "^2.29.4",
+    "readline-sync": "^1.4.10"
+  }
+}
