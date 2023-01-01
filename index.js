@@ -34,8 +34,8 @@ function re() {
         re();
     } else if(command.toUpperCase() === "SIL") {
         console.clear();
-        const todo = rl.question('Silimek istediğiniz is ID: ');
-        let to_do = db.get("todo") || [];
+        const todo = rl.question('Silimek istediginiz is ID: ');
+        let to_do = db.get("todo");
         let new_to_do = to_do.filter(x => x.id !== todo);
         db.set("todo", new_to_do);
         console.log("İs silindi!");
@@ -55,11 +55,11 @@ function re() {
         console.log(komutlar);
         re();
     }  else if(command.toUpperCase() === "CLS") {
-        console.clear();
         re();
     } else {
         console.clear();
         console.log("Böyle bir komut yok!");
+        console.log(komutlar);
         re();
     }
 }
